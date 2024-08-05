@@ -1,0 +1,14 @@
+@layer tailwind {
+  @tailwind base;
+}
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-auth {
+    background-color: #05192d;
+    background-image: url(/assets/images/background.svg);
+    background-position: center -240px;
+    background-repeat: no-repeat;
+  }
+}

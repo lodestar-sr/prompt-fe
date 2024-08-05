@@ -1,0 +1,17 @@
+{
+  "name": "@pms/eslint-config",
+  "version": "1.0.0",
+  "private": true,
+  "files": [
+    "next.js",
+    "react-library.js",
+    "server.js"
+  ],
+  "devDependencies": {
+    "@vercel/style-guide": "6.0.0",
+    "eslint-config-turbo": "2.0.9",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-only-warn": "1.1.0",
+    "eslint-plugin-simple-import-sort": "12.1.1"
+  }
+}

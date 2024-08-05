@@ -1,0 +1,35 @@
+{
+  "name": "pms",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build:packages": "turbo run build --filter=./packages/**",
+    "build:web": "turbo run build --filter=web",
+    "clean": "rimraf --glob **/.next **/dist **/.turbo **/*.log",
+    "dev:packages": "turbo run dev --filter=./packages/**",
+    "dev:web": "turbo run dev --filter=web",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,mjs,css,scss,less,json}\"",
+    "generate:swagger": "turbo run generate:swagger --filter=@pms/rest",
+    "lint": "turbo lint",
+    "prepare": "husky",
+    "start:web": "turbo run start --filter=web",
+    "typecheck": "turbo run typecheck --filter=./apps/**"
+  },
+  "prettier": "@vercel/style-guide/prettier",
+  "devDependencies": {
+    "@commitlint/cli": "19.3.0",
+    "@commitlint/config-conventional": "19.2.2",
+    "@vercel/style-guide": "6.0.0",
+    "husky": "9.1.4",
+    "prettier": "3.3.3",
+    "turbo": "2.0.11",
+    "typescript": "5.3.3"
+  },
+  "packageManager": "pnpm@9.6.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
